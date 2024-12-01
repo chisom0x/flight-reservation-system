@@ -1,9 +1,4 @@
-<div align="center" style="margin-bottom:20px">
-    <div align="center">
-                       <a href="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml"><img src="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square"/></a>
-                       <a href="https://github.com/meysamhadeli/booking-microservices-express-js/blob/main/LICENSE"><img src="https://img.shields.io/github/license/meysamhadeli/booking-microservices-express-js?color=%234275f5&style=flat-square"/></a>
-    </div>
-</div>
+
 
 > **A practical and imaginary microservices for implementing an infrastructure for up and running distributed system with the latest technology and architecture like Vertical Slice Architecture, Event Driven Architecture, CQRS, Postgres, RabbitMQ and Express in Node.Js.** 🚀
 
