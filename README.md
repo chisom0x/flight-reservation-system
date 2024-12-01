@@ -1,5 +1,4 @@
 <div align="center" style="margin-bottom:20px">
-  <img src="assets/logo.png" alt="booking-microservices-express-js" />
     <div align="center">
                        <a href="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml"><img src="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square"/></a>
                        <a href="https://github.com/meysamhadeli/booking-microservices-express-js/blob/main/LICENSE"><img src="https://img.shields.io/github/license/meysamhadeli/booking-microservices-express-js?color=%234275f5&style=flat-square"/></a>
@@ -10,11 +9,6 @@
 
 > 💡 **This project is not business-oriented and most of my focus was in the thechnical part for implement a distributed system with a sample project. In this project I implemented some concept in microservices like Messaging, Tracing, Event Driven Architecture, Vertical Slice Architecture, CQRS.**
 
-
-> **You can find `Nestjs` ported of this project in this link:**
-🔗 [booking-microservices-nestjs](https://github.com/meysamhadeli/booking-microservices-nestjs)
-
-<a href="https://gitpod.io/#https://github.com/meysamhadeli/booking-microservices-express"><img alt="Open in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
 
 # Table of Contents
 
