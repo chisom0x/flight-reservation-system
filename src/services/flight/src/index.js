@@ -9,7 +9,7 @@ const connectDB = async () => {
     await sequelize.sync({ force: false, alter: true });
 
     const server = createServer();
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 3002;
 
     server.listen(port, () => {
       console.log(`Flight Service running on ${port}!`);

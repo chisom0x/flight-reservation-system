@@ -1,20 +1,7 @@
-<div align="center" style="margin-bottom:20px">
-  <img src="assets/logo.png" alt="booking-microservices-express-js" />
-    <div align="center">
-                       <a href="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml"><img src="https://github.com/meysamhadeli/booking-microservices-expressjs/actions/workflows/ci.yml/badge.svg?branch=main&style=flat-square"/></a>
-                       <a href="https://github.com/meysamhadeli/booking-microservices-express-js/blob/main/LICENSE"><img src="https://img.shields.io/github/license/meysamhadeli/booking-microservices-express-js?color=%234275f5&style=flat-square"/></a>
-    </div>
-</div>
-
 > **A practical and imaginary microservices for implementing an infrastructure for up and running distributed system with the latest technology and architecture like Vertical Slice Architecture, Event Driven Architecture, CQRS, Postgres, RabbitMQ and Express in Node.Js.** 🚀
 
-> 💡 **This project is not business-oriented and most of my focus was in the thechnical part for implement a distributed system with a sample project. In this project I implemented some concept in microservices like Messaging, Tracing, Event Driven Architecture, Vertical Slice Architecture, CQRS.**
+> 💡 **This project is not business-oriented and most of my focus was in the technical part for implement a distributed system with a sample project. In this project I implemented some concept in microservices like Messaging, Tracing, Event Driven Architecture, Vertical Slice Architecture, CQRS.**
 
-
-> **You can find `Nestjs` ported of this project in this link:**
-🔗 [booking-microservices-nestjs](https://github.com/meysamhadeli/booking-microservices-nestjs)
-
-<a href="https://gitpod.io/#https://github.com/meysamhadeli/booking-microservices-express"><img alt="Open in Gitpod" src="https://gitpod.io/button/open-in-gitpod.svg"/></a>
 
 # Table of Contents
 
@@ -36,74 +23,49 @@
 ## The Goals of This Project
 
 - :sparkle: Using `Vertical Slice Architecture` for `architecture` level.
-- :sparkle: Using `Rabbitmq` on top of `amqp` for `Event Driven Architecture` between our microservices.
+- :sparkle: Using `RabbitMq` on top of `amqp` for `Event Driven Architecture` between our microservices.
 - :sparkle: Using `Data Centric` Architecture based on CRUD in all Services.
-- :sparkle: Using `Rest` for `internal communication` between our microservices with `axios`.
-- :sparkle: Using `CQRS` implementation with `MediatrJs` internal library.
 - :sparkle: Using `Express` for `web framework`.
-- :sparkle: Using `Postgres` for database level with `typeorm`.
-- :sparkle: Using `tsyringe` for handling `dependency injection`.
+- :sparkle: Using `Postgres` for database level with `sequelize`.
 - :sparkle: Using `Passport` for `authentication` and `authorization`, base on `JWT`.
-- :sparkle: Using `OpenTelemetry` for distributed tracing top of `Jaeger` and `Zipkin`.
-- :sparkle: Using `OpenTelemetry` for monitoring top of `Prometteuse` and `Grafana`.
 - :sparkle: Using `Joi` for `validation` input in our handlers and endpoints.
 - :sparkle: Using `dotenv` for `configuration` management.
-- :sparkle: Using `Unit Testing` for testing `small units` and `mocking` our dependencies with `Jest`.
-- :sparkle: Using `End-To-End Testing` and `Integration Testing` for testing `features` with all dependencies using `testcontainers`.
-- :sparkle: Using `winston` and 'morgan' for `logging`.
-- :sparkle: Using `swagger-ui-express` and `tsoa` for generate `api documentation` automatically.
-- :sparkle: Using `ts-mapper` for `mapping` our objects.
-- :sparkle: Using `Problem Details` standard for `readable details of errors`.
-- :sparkle: Using `eslint` and `prettier` for `formatting` of our code.
-- :sparkle: Using `Docker-Compose` for our `deployment` mechanism.
-- :construction: Using `MongoDB` for read side with `mongoose`.
-- :construction: Using `Domain Driven Design` (DDD) to implement all `business` processes in microservices.
-- :construction: Using `Inbox Pattern` for ensuring message idempotency for receiver and `Exactly once Delivery`.
-- :construction: Using `Outbox Pattern` for ensuring no message is lost and there is at `At Least One Delivery`.
+- :constructing: Using `Unit Testing` for testing `small units` and `mocking` our dependencies with `Jest`.
+- :constructing: Using `'morgan' for `logging`.
+- :constructing: Using `swagger-ui-express` and `tsoa` for generate `api documentation` automatically.
+- :constructing: Using `eslint` and `prettier` for `formatting` of our code.
+- :constructing: Using `Docker-Compose` for our `deployment` mechanism.
 
 ## Plan
-
-> 🌀This project is a work in progress, new features will be added over time.🌀
-
-I will try to register future goals and additions in the [Issues](https://github.com/meysamhadeli/booking-microservices-express-js/issues) section of this repository.
 
 High-level plan is represented in the table
 
 | Feature           | Status         |
 | ----------------- | -------------- |
+| Gateway           | In Progress 🚧 |
 | Identity Service  | Completed ✔️   |
 | Flight Service    | Completed ✔️   |
-| Passenger Service | Completed ✔️   |
 | Booking Service   | Completed ✔️   |
+| Payment Service   | Completed ✔️   |
 | Building Blocks   | Completed ✔️   |
+| Shared            | In Progress 🚧 |
 
-## Technologies - Libraries
-- ✔️ **[`microsoft/TypeScript`](https://github.com/microsoft/TypeScript)** - TypeScript is a language for application-scale JavaScript.
+
+## Technologies - Libraries 
+- ✔️ **[`javascript/JavaScript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - JavaScript is a high-level, versatile programming language for building dynamic web applications.
 - ✔️ **[`expressjs/express`](https://github.com/expressjs/express)** - Fast, unopinionated, minimalist web framework for Node.js
-- ✔️ **[`typeorm/typeorm`](https://github.com/typeorm/typeorm)** - TypeORM is highly influenced by other ORMs, such as Hibernate, Doctrine and Entity Framework
+- ✔️ **[`sequelize/sequelize`](https://github.com/sequelize/sequelize)** - Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server, offering a rich feature set for database interaction.
 - ✔️ **[`amqp-node/amqplib`](https://github.com/amqp-node/amqplib)** - A library for making AMQP 0-9-1 clients for Node.JS
-- ✔️ **[`microsoft/tsyringe`](https://github.com/microsoft/tsyringe)** - A lightweight dependency injection container for TypeScript/JavaScript for constructor injection
-- ✔️ **[`jaredhanson/passport`](https://github.com/jaredhanson/passport)** - Passport is Express-compatible authentication middleware for Node.js
-- ✔️ **[`open-telemetry/opentelemetry-js`](https://github.com/open-telemetry/opentelemetry-js)** - A framework for collecting traces, metrics, and logs from applications
-- ✔️ **[`siimon/prom-client`](https://github.com/siimon/prom-client)** - A prometheus client for Node.js that supports histogram, summaries, gauges and counters
 - ✔️ **[`scottie1984/swagger-ui-express`](https://github.com/scottie1984/swagger-ui-express)** - Serve auto-generated swagger-ui generated API docs from express
-- ✔️ **[`lukeautry/tsoa`](https://github.com/lukeautry/tsoa)** - OpenAPI-compliant REST APIs using TypeScript and Node
-- ✔️ **[`axios/axios`](https://github.com/axios/axios)** - Promise based HTTP client for the browser and node.js
 - ✔️ **[`motdotla/dotenv`](https://github.com/motdotla/dotenv)** - Dotenv is a zero-dependency module that loads environment variables from a .env
-- ✔️ **[`PDMLab/http-problem-details`](https://github.com/PDMLab/http-problem-details)** - This library implements HTTP Problem details (RFC 7807) for HTTP APIs
 - ✔️ **[`helmetjs/helmet`](https://github.com/helmetjs/helmet)** - Helmet helps secure Express apps by setting HTTP response headers
 - ✔️ **[`hapijs/joi`](https://github.com/hapijs/joi)** - The most powerful schema description language and data validator for JavaScript
 - ✔️ **[`expressjs/morgan`](https://github.com/expressjs/morgan)** - HTTP request logger middleware for node.js
-- ✔️ **[`winstonjs/winston`](https://github.com/winstonjs/winston)** - A logger for just about everything
 - ✔️ **[`jestjs/jest`](https://github.com/jestjs/jest)** - A javascript framework for testing
 - ✔️ **[`testcontainers/testcontainers-node`](https://github.com/testcontainers/testcontainers-node)** - A library to support tests with throwaway instances of Docker containers
 - ✔️ **[`faker-js/faker`](https://github.com/faker-js/faker)** - Generate massive amounts of fake (but realistic) data for testing and development
-- ✔️ **[`florinn/typemoq`](https://github.com/florinn/typemoq)** - Simple mocking library for JavaScript targeting TypeScript development
 - ✔️ **[`ladjs/supertest`](https://github.com/ladjs/supertest)** - High-level abstraction for testing HTTP
-- ✔️ **[`eslint/eslint`](https://github.com/eslint/eslint)** - ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code
 - ✔️ **[`prettier/prettier`](https://github.com/prettier/prettier)** - Opinionated Code Formatter
-- ✔️ **[`vercel/async-retry`](https://github.com/vercel/async-retry)** - Retrying made simple, easy, and async
-- ✔️ **[`MarluanEspiritusanto/ts-mapper`](https://github.com/MarluanEspiritusanto/ts-mapper)** - A mapper for mapping one object to another
 
 ## The Domain And Bounded Context - Service Boundary
 
@@ -111,17 +73,16 @@ High-level plan is represented in the table
 
 - `Flight Service`: The Flight Service is a bounded context `CRUD` service to handle flight related operations.
 
-- `Passenger Service`: The Passenger Service is a bounded context for managing passenger information, tracking activities and subscribing to get notification for out of stock products.
+- `Payment Service`: The Payment Service is a bounded context for managing payments of booking fees.
 
 - `Booking Service`: The Booking Service is a bounded context for managing all operation related to booking ticket.
 
-![](./assets/booking-microservices.png)
 
 ## Structure of Project
 
 In this project I used a mix of [clean architecture](https://jasontaylor.dev/clean-architecture-getting-started/), [vertical slice architecture](https://jimmybogard.com/vertical-slice-architecture/) and I used [feature folder structure](http://www.kamilgrzybek.com/design/feature-folders/) to structure my files.
 
-Each microservice has its dependencies such as databases, files etc. Each microservice is decoupled from other microservices and developed and deployed separately. Microservices talk to each other with Rest or gRPC for synchronous calls and use RabbitMq or Kafka for asynchronous calls.
+Each microservice has its dependencies such as databases, files etc. Each microservice is decoupled from other microservices and developed separately. Microservices talk to each other with Rest for synchronous calls and use RabbitMq for asynchronous calls.
 
 We have a separate microservice `Identity` for authentication and authorization of each request. Once signed-in users are issued a JWT token. This token is used by other microservices to validate the user, read claims and allow access to authorized/role specific endpoints.
 
@@ -133,6 +94,8 @@ I treat each request as a distinct use case or slice, encapsulating and grouping
 When adding or changing a feature in an application in n-tire architecture, we are typically touching many "layers" in an application. We are changing the user interface, adding fields to models, modifying validation, and so on. Instead of coupling across a layer, we couple vertically along a slice. We `minimize coupling` `between slices`, and `maximize coupling` `in a slice`.
 
 With this approach, each of our vertical slices can decide for itself how to best fulfill the request. New features only add code, we're not changing shared code and worrying about side effects.
+
+# stopped editing from here
 
 <div align="center">
   <img src="./assets/vertical-slice-architecture.png" />

@@ -19,8 +19,9 @@ Airport.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [3, 3], 
+        len: [3, 3],
       },
+      field: 'iata_code',
     },
     country: {
       type: DataTypes.STRING(128),
@@ -41,16 +42,17 @@ Airport.init(
       type: DataTypes.STRING(3),
       allowNull: false,
       unique: true,
+      field: 'city_code',
     },
   },
   {
     sequelize,
     tableName: 'airports',
-    timestamps: true, 
+    timestamps: true,
     indexes: [
-        { fields: ['iata_code'], unique: true },
-        { fields: ['city_code'], unique: true },
-      ],
+      { fields: ['iata_code'], unique: true },
+      { fields: ['city_code'], unique: true },
+    ],
   }
 );
 

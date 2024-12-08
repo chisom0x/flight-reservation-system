@@ -1,6 +1,6 @@
 import Airport from '../models/airport-model.js';
 
-export default class airportRepository {
+export default class AirportRepository {
   static async findAirportByCountry(country) {
     try {
       const airport = await Airport.findOne({

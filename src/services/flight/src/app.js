@@ -4,6 +4,13 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import router from './routers/index.js';
 import globalErrorHandler from '../../../shared/error-handling/global-error-handler.js';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const corsOptions = {
   origin: true,

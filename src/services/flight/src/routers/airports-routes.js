@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import Airport from '../controllers/airport-controller';
+import AirportController from '../controllers/airport-controller.js';
 
 const router = Router();
 
-router.get('/', Airport.getAllAirports);
-router.post('/', Airport.addAirport);
-router.get('/:country', Airport.getAirportsByCountry);
+router.get('/', AirportController.getAllAirports);
+router.post('/', AirportController.addAirport);
+router.get('/:country', AirportController.getAirportsByCountry);
 
 export default router;

@@ -1,20 +1,20 @@
 import Flight from '../models/flight_model.js';
+import { Op } from 'sequelize';
 
-export default class flightRepository {
-  static async addFlight(flightDetails) {
-    const {
-      flightNumber,
-      departureAirportId,
-      arrivalAirportId,
-      departureDate,
-      departureTime,
-      arrivalTime,
-      duration,
-      price,
-      airlineName,
-      seatsAvailable,
-    } = flightDetails;
 
+export default class FlightRepository {
+  static async addFlight(
+    flightNumber,
+    departureAirportId,
+    arrivalAirportId,
+    departureDate,
+    departureTime,
+    arrivalTime,
+    duration,
+    price,
+    airlineName,
+    seatsAvailable
+  ) {
     try {
       const newFlight = await Flight.create({
         flightNumber,
@@ -28,10 +28,10 @@ export default class flightRepository {
         airlineName,
         seatsAvailable,
       });
-
+  
       return newFlight;
     } catch (error) {
-      throw error;
+      throw error; 
     }
   }
 
@@ -123,4 +123,6 @@ export default class flightRepository {
       throw new Error(`Failed to delete flight: ${error.message}`);
     }
   }
+
+  
 }

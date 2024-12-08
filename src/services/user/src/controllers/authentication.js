@@ -17,13 +17,6 @@ export default class Authentication {
       }
 
       const { firstName, lastName, email, password } = value;
-      if (!firstName)
-        return next(new AppError('Please enter your first name!', 400));
-      if (!lastName)
-        return next(new AppError('please enter your lastname!', 400));
-      if (!email)
-        return next(new AppError('please enter your email address!', 400));
-      if (!password) return next(new AppError('please set a password!', 400));
 
       const userExists = await userRepository.findUserByEmail(email);
 
@@ -47,16 +40,13 @@ export default class Authentication {
       const { error, value } = loginSchema.validate(req.body, {
         abortEarly: false,
       });
-      
+
       if (error) {
         const validationErrors = error.details.map((err) => err.message);
         return next(new AppError(validationErrors.join(', '), 400));
       }
 
       const { email, password } = value;
-      if (!email)
-        return next(new AppError('please enter your email address', 400));
-      if (!password) return next(new AppError('please enter a password', 400));
 
       const user = await userRepository.findUserByEmail(email);
 
